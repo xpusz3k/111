@@ -1,0 +1,1761 @@
+@import"https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: Poppins, Dosis, sans-serif;
+    transition: .2s linear
+}
+
+html,
+body,
+#root {
+    background: #212027;
+    height: 100%
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 76px;
+    background: #14161cb3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 72px
+}
+
+nav.scrolled {
+    background: #212027;
+    height: 64px
+}
+
+nav header {
+    color: #f9f9fb;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px
+}
+
+nav ul {
+    display: flex;
+    align-items: center
+}
+
+nav ul li a {
+    padding: 4px 12px;
+    color: #f9f9fb;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #a577ff
+}
+
+nav ul li a:hover svg,
+nav ul li a.active svg {
+    color: #f9f9fb
+}
+
+nav button {
+    display: none
+}
+
+@media screen and (max-width: 767px) {
+    nav {
+        height: 64px;
+        padding: 0 24px
+    }
+
+    nav ul {
+        display: none
+    }
+
+    nav ul.show {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background: #14161c;
+        flex-direction: column;
+        gap: 8px;
+        padding: 48px
+    }
+
+    nav ul.show li a {
+        font-size: 18px
+    }
+
+    nav button {
+        display: block;
+        height: 32px;
+        width: 32px;
+        background: transparent;
+        color: #a577ff;
+        font-size: 18px;
+        cursor: pointer
+    }
+}
+
+main {
+    position: relative;
+    height: 100%
+}
+
+main section .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 24px
+}
+
+main section .heading h3 {
+    color: #a577ff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px
+}
+
+main section .heading p {
+    color: #f9f9fb;
+    font-weight: 600;
+    font-size: 32px
+}
+
+main section.hero-section {
+    height: 40em;
+    padding: 16px;
+    background: url(/assets/background-DTwL7hc4.png) no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed
+}
+
+main section.hero-section .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 128px
+}
+
+main section.hero-section .text h1 {
+    color: #f9f9fb;
+    font-size: 58px;
+    font-weight: 600;
+    text-align: center
+}
+
+main section.hero-section .text p {
+    color: #f9f9fb;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center
+}
+
+main section.hero-section .text button {
+    height: 42px;
+    width: 196px;
+    border-radius: 4px;
+    background: #212027;
+    color: #f9f9fb;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 24px;
+    cursor: pointer;
+    position: relative
+}
+
+main section.hero-section .text button:hover {
+    transform: scale(1.05);
+    border-radius: 32px
+}
+
+main section.blog-heading {
+    position: relative;
+    top: 70px
+}
+
+main section.blog-heading .content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 72px 72px 0
+}
+
+main section.blog-heading .content h3 {
+    color: #f9f9fb;
+    font-weight: 700;
+    font-size: 28px
+}
+
+main section.blog-heading .content p {
+    color: #8b8b8b;
+    font-weight: 400;
+    font-size: 14px
+}
+
+@media screen and (max-width: 767px) {
+    main section.blog-heading .content {
+        padding: 32px 32px 0
+    }
+}
+
+@media screen and (max-width: 1124px) {
+    main section.blog-heading .content {
+        padding: 32px 32px 0
+    }
+}
+
+main section.blogs-display .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 96px 96px 0
+}
+
+main section.blogs-display .content h3 {
+    color: #f9f9fb;
+    font-weight: 700;
+    font-size: 28px
+}
+
+main section.blogs-display .content p {
+    color: #8b8b8b;
+    font-weight: 400;
+    font-size: 14px
+}
+
+main section.blogs {
+    padding: 72px;
+    position: relative;
+    top: 70px
+}
+
+main section.blogs .content {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap
+}
+
+main section.blogs .content .blog {
+    width: 412px;
+    height: 312px;
+    background: #14161c;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding-bottom: 16px;
+    cursor: pointer
+}
+
+main section.blogs .content .blog .top {
+    min-height: 200px;
+    max-height: 200px;
+    width: 100%
+}
+
+main section.blogs .content .blog .top img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover
+}
+
+main section.blogs .content .blog .info {
+    padding: 16px;
+    max-height: 110px;
+    overflow-y: auto
+}
+
+main section.blogs .content .blog .info::-webkit-scrollbar {
+    display: none
+}
+
+main section.blogs .content .blog .info span {
+    color: #8b8b8b;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px
+}
+
+main section.blogs .content .blog .info p {
+    color: #f9f9fb;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 8px
+}
+
+main section.blogs .content .blog:hover {
+    transform: scale(1.025);
+    background: #191c23
+}
+
+@media screen and (max-width: 767px) {
+    main section.blogs {
+        padding: 32px
+    }
+
+    main section.blogs .content .blog {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 1124px) {
+    main section.blogs {
+        padding: 32px
+    }
+
+    main section.blogs .content {
+        gap: 16px
+    }
+}
+
+main section.error {
+    position: relative;
+    top: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 76px)
+}
+
+main section.error .content {
+    text-align: center
+}
+
+main section.error .content img {
+    height: 256px;
+    margin-bottom: 24px;
+    animation: slide 4s linear infinite
+}
+
+@keyframes slide {
+
+    0%,
+    to {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-20px)
+    }
+}
+
+main section.error .content h2 {
+    color: #f9f9fb;
+    font-size: 32px
+}
+
+main section.error .content p {
+    color: #8b8b8b;
+    font-size: 14px;
+    font-weight: 500
+}
+
+main section.error .content .buttons {
+    margin-top: 32px;
+    display: flex;
+    gap: 24px;
+    justify-content: center
+}
+
+main section.error .content .buttons a {
+    background: #14161c;
+    color: #f9f9fb;
+    font-size: 15px;
+    font-weight: 500;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    border-radius: 4px;
+    gap: 8px
+}
+
+main section.error .content .buttons a:hover {
+    background: #191c23
+}
+
+main section.about {
+    background: #14161c;
+    padding: 24px
+}
+
+main section.about .list {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+main section.about .list .about-box {
+    height: 396px;
+    flex: 0 1 calc(33.3% - 4px);
+    background: #212027;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+main section.about .list .about-box:first-child {
+    border-radius: 8px 0 0 8px
+}
+
+main section.about .list .about-box:last-child {
+    border-radius: 0 8px 8px 0
+}
+
+main section.about .list .about-box:only-child {
+    border-radius: 8px
+}
+
+@media screen and (max-width: 1124px) {
+    main section.about .list .about-box {
+        flex: 0 1 100%;
+        border-radius: 0;
+        height: fit-content
+    }
+
+    main section.about .list .about-box:first-child {
+        border-radius: 8px 8px 0 0
+    }
+
+    main section.about .list .about-box:last-child {
+        border-radius: 0 0 8px 8px
+    }
+
+    main section.about .list .about-box:only-child {
+        border-radius: 8px
+    }
+}
+
+main section.about .list .about-box:hover {
+    background: #27262e
+}
+
+main section.about .list .about-box:hover .about-box-text {
+    transform: translateY(10px)
+}
+
+main section.about .list .about-box .about-box-icon {
+    color: #f9f9fb;
+    font-size: 32px
+}
+
+main section.about .list .about-box .about-box-text h3 {
+    color: #f9f9fb;
+    font-size: 26px;
+    font-weight: 700;
+    word-break: break-all
+}
+
+main section.about .list .about-box .about-box-text p {
+    color: #8b8b8b;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    word-break: break-all
+}
+
+main section.about .list .about-box .about-box-text a {
+    color: #a577ff;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 4px 0
+}
+
+main section.about .list .about-box .about-box-text a:hover svg {
+    transform: translate(5px)
+}
+
+main section.utility {
+    padding: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px
+}
+
+main section.utility .texts {
+    display: flex;
+    flex-direction: column
+}
+
+main section.utility .texts h3 {
+    color: #f9f9fb;
+    font-weight: 700;
+    font-size: 28px
+}
+
+main section.utility .texts p {
+    color: #a5a5a5;
+    font-weight: 400;
+    font-size: 14px
+}
+
+main section.utility .buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+main section.utility .buttons a {
+    height: 42px;
+    width: fit-content;
+    padding: 4px 24px;
+    background: #14161c;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9f9fb;
+    gap: 8px
+}
+
+main section.utility .buttons a:hover {
+    background: #191c23;
+    transform: scale(1.025)
+}
+
+main section.db-selection {
+    position: relative;
+    top: 71px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 24px;
+    justify-content: center;
+    height: 100%
+}
+
+main section.db-selection .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
+
+main section.db-selection .top h3 {
+    color: #f9f9fb;
+    font-weight: 700;
+    font-size: 26px
+}
+
+main section.db-selection .top p {
+    color: #8b8b8b;
+    font-size: 13px;
+    font-weight: 500
+}
+
+main section.db-selection .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap
+}
+
+main section.db-selection .content .box {
+    background: #14161c;
+    padding: 32px;
+    border-radius: 8px;
+    width: 556px;
+    cursor: pointer
+}
+
+main section.db-selection .content .box .icon {
+    height: 42px;
+    width: 42px;
+    color: #a577ff;
+    font-size: 20px
+}
+
+main section.db-selection .content .box h2 {
+    color: #f9f9fb
+}
+
+main section.db-selection .content .box p {
+    color: #8b8b8b;
+    font-weight: 500;
+    font-size: 13px
+}
+
+main section.db-selection .content .box:hover {
+    background: #191c23;
+    transform: scale(1.025)
+}
+
+@media screen and (max-width: 1080px) {
+    main section.db-selection .content {
+        gap: 8px;
+        flex-direction: column
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main section.db-selection .content {
+        flex-direction: column
+    }
+
+    main section.db-selection .content .box {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    main section.db-selection {
+        height: fit-content;
+        top: 120px
+    }
+}
+
+main section.db-informations,
+main section.db-offers,
+main section.db-status,
+main section.db-blogs {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 24px;
+    justify-content: center
+}
+
+main section.db-informations .content,
+main section.db-offers .content,
+main section.db-status .content,
+main section.db-blogs .content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px
+}
+
+main section.db-informations .content .top,
+main section.db-offers .content .top,
+main section.db-status .content .top,
+main section.db-blogs .content .top {
+    display: flex;
+    flex-direction: column
+}
+
+main section.db-informations .content .top h3,
+main section.db-offers .content .top h3,
+main section.db-status .content .top h3,
+main section.db-blogs .content .top h3 {
+    color: #f9f9fb;
+    font-weight: 700;
+    font-size: 26px
+}
+
+main section.db-informations .content .top p,
+main section.db-offers .content .top p,
+main section.db-status .content .top p,
+main section.db-blogs .content .top p {
+    color: #8b8b8b;
+    font-size: 13px;
+    font-weight: 500
+}
+
+main section.db-informations .content .switch,
+main section.db-offers .content .switch,
+main section.db-status .content .switch,
+main section.db-blogs .content .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px
+}
+
+main section.db-informations .content .switch input,
+main section.db-offers .content .switch input,
+main section.db-status .content .switch input,
+main section.db-blogs .content .switch input {
+    display: none
+}
+
+main section.db-informations .content .slider,
+main section.db-offers .content .slider,
+main section.db-status .content .slider,
+main section.db-blogs .content .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #8b8b8b;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+main section.db-informations .content .slider:before,
+main section.db-offers .content .slider:before,
+main section.db-status .content .slider:before,
+main section.db-blogs .content .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #f9f9fb;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+main section.db-informations .content input:checked+.slider,
+main section.db-offers .content input:checked+.slider,
+main section.db-status .content input:checked+.slider,
+main section.db-blogs .content input:checked+.slider {
+    background-color: #a577ff
+}
+
+main section.db-informations .content input:checked+.slider:before,
+main section.db-offers .content input:checked+.slider:before,
+main section.db-status .content input:checked+.slider:before,
+main section.db-blogs .content input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translate(26px)
+}
+
+main section.db-informations .content .slider.round,
+main section.db-offers .content .slider.round,
+main section.db-status .content .slider.round,
+main section.db-blogs .content .slider.round {
+    border-radius: 34px
+}
+
+main section.db-informations .content .slider.round:before,
+main section.db-offers .content .slider.round:before,
+main section.db-status .content .slider.round:before,
+main section.db-blogs .content .slider.round:before {
+    border-radius: 50%
+}
+
+main section.db-informations .content .container,
+main section.db-offers .content .container,
+main section.db-status .content .container,
+main section.db-blogs .content .container {
+    background: #14161c;
+    width: fit-content;
+    padding: 24px;
+    border-radius: 8px;
+    width: 456px;
+    min-height: 256px;
+    max-height: 512px
+}
+
+main section.db-informations .content .container#auto,
+main section.db-offers .content .container#auto,
+main section.db-status .content .container#auto,
+main section.db-blogs .content .container#auto {
+    height: fit-content;
+    min-height: unset;
+    max-height: unset
+}
+
+main section.db-informations .content .container h4,
+main section.db-offers .content .container h4,
+main section.db-status .content .container h4,
+main section.db-blogs .content .container h4 {
+    color: #f9f9fb;
+    font-weight: 700;
+    font-size: 18px
+}
+
+main section.db-informations .content .container .info p,
+main section.db-offers .content .container .info p,
+main section.db-status .content .container .info p,
+main section.db-blogs .content .container .info p {
+    color: #8b8b8b;
+    font-weight: 600;
+    font-size: 13px
+}
+
+main section.db-informations .content .container .offer-editing,
+main section.db-offers .content .container .offer-editing,
+main section.db-status .content .container .offer-editing,
+main section.db-blogs .content .container .offer-editing {
+    margin-top: 18px
+}
+
+main section.db-informations .content .container .offer-editing .form-group,
+main section.db-offers .content .container .offer-editing .form-group,
+main section.db-status .content .container .offer-editing .form-group,
+main section.db-blogs .content .container .offer-editing .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+main section.db-informations .content .container .offer-editing .form-group span,
+main section.db-offers .content .container .offer-editing .form-group span,
+main section.db-status .content .container .offer-editing .form-group span,
+main section.db-blogs .content .container .offer-editing .form-group span {
+    color: #8b8b8b;
+    font-weight: 600;
+    font-size: 13px
+}
+
+main section.db-informations .content .container .offer-editing .form-group input,
+main section.db-informations .content .container .offer-editing .form-group textarea,
+main section.db-informations .content .container .offer-editing .form-group label,
+main section.db-offers .content .container .offer-editing .form-group input,
+main section.db-offers .content .container .offer-editing .form-group textarea,
+main section.db-offers .content .container .offer-editing .form-group label,
+main section.db-status .content .container .offer-editing .form-group input,
+main section.db-status .content .container .offer-editing .form-group textarea,
+main section.db-status .content .container .offer-editing .form-group label,
+main section.db-blogs .content .container .offer-editing .form-group input,
+main section.db-blogs .content .container .offer-editing .form-group textarea,
+main section.db-blogs .content .container .offer-editing .form-group label {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 4px 12px;
+    min-height: 32px;
+    max-height: 128px;
+    border-radius: 8px;
+    background: #212027;
+    color: #f9f9fb;
+    font-weight: 600
+}
+
+main section.db-informations .content .container .offer-editing .form-group input#image,
+main section.db-informations .content .container .offer-editing .form-group textarea#image,
+main section.db-informations .content .container .offer-editing .form-group label#image,
+main section.db-offers .content .container .offer-editing .form-group input#image,
+main section.db-offers .content .container .offer-editing .form-group textarea#image,
+main section.db-offers .content .container .offer-editing .form-group label#image,
+main section.db-status .content .container .offer-editing .form-group input#image,
+main section.db-status .content .container .offer-editing .form-group textarea#image,
+main section.db-status .content .container .offer-editing .form-group label#image,
+main section.db-blogs .content .container .offer-editing .form-group input#image,
+main section.db-blogs .content .container .offer-editing .form-group textarea#image,
+main section.db-blogs .content .container .offer-editing .form-group label#image {
+    display: none
+}
+
+main section.db-informations .content .container .offer-editing .form-group label,
+main section.db-offers .content .container .offer-editing .form-group label,
+main section.db-status .content .container .offer-editing .form-group label,
+main section.db-blogs .content .container .offer-editing .form-group label {
+    cursor: pointer
+}
+
+main section.db-informations .content .container select,
+main section.db-offers .content .container select,
+main section.db-status .content .container select,
+main section.db-blogs .content .container select {
+    margin-top: 18px;
+    width: 100%;
+    background: #212027;
+    height: 32px;
+    border-radius: 4px;
+    color: #f9f9fb;
+    padding: 4px 12px
+}
+
+main section.db-informations .content .container form,
+main section.db-offers .content .container form,
+main section.db-status .content .container form,
+main section.db-blogs .content .container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+main section.db-informations .content .container form .form-input,
+main section.db-offers .content .container form .form-input,
+main section.db-status .content .container form .form-input,
+main section.db-blogs .content .container form .form-input {
+    display: flex;
+    flex-direction: column
+}
+
+main section.db-informations .content .container form .form-input span,
+main section.db-offers .content .container form .form-input span,
+main section.db-status .content .container form .form-input span,
+main section.db-blogs .content .container form .form-input span {
+    color: #8b8b8b;
+    font-weight: 600;
+    font-size: 13px
+}
+
+main section.db-informations .content .container form .form-input input,
+main section.db-informations .content .container form .form-input textarea,
+main section.db-offers .content .container form .form-input input,
+main section.db-offers .content .container form .form-input textarea,
+main section.db-status .content .container form .form-input input,
+main section.db-status .content .container form .form-input textarea,
+main section.db-blogs .content .container form .form-input input,
+main section.db-blogs .content .container form .form-input textarea {
+    margin-top: 8px;
+    padding: 4px 12px;
+    min-height: 32px;
+    width: 100%;
+    border-radius: 4px;
+    background: #212027;
+    min-width: 100%;
+    max-width: 100%;
+    color: #f9f9fb;
+    font-weight: 600
+}
+
+main section.db-informations .content .container form button,
+main section.db-offers .content .container form button,
+main section.db-status .content .container form button,
+main section.db-blogs .content .container form button {
+    width: 100%;
+    height: 42px;
+    border-radius: 4px;
+    background: #a577ff;
+    font-weight: 600;
+    color: #f9f9fb;
+    cursor: pointer
+}
+
+main section.db-informations .content .container form button:hover,
+main section.db-offers .content .container form button:hover,
+main section.db-status .content .container form button:hover,
+main section.db-blogs .content .container form button:hover {
+    background: #ad84ff
+}
+
+@media screen and (max-width: 768px) {
+
+    main section.db-informations .content .container,
+    main section.db-offers .content .container,
+    main section.db-status .content .container,
+    main section.db-blogs .content .container {
+        width: 100%
+    }
+}
+
+main section.db-informations .content .content,
+main section.db-offers .content .content,
+main section.db-status .content .content,
+main section.db-blogs .content .content {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap
+}
+
+main section.db-informations .content .content .blog,
+main section.db-offers .content .content .blog,
+main section.db-status .content .content .blog,
+main section.db-blogs .content .content .blog {
+    width: 412px;
+    height: 312px;
+    background: #14161c;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding-bottom: 16px;
+    position: relative;
+    cursor: pointer
+}
+
+main section.db-informations .content .content .blog .editing,
+main section.db-offers .content .content .blog .editing,
+main section.db-status .content .content .blog .editing,
+main section.db-blogs .content .content .blog .editing {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: fit-content;
+    display: flex;
+    gap: 4px
+}
+
+main section.db-informations .content .content .blog .editing button,
+main section.db-offers .content .content .blog .editing button,
+main section.db-status .content .content .blog .editing button,
+main section.db-blogs .content .content .blog .editing button {
+    font-size: 15px;
+    color: #8b8b8b;
+    background: #212027;
+    border-radius: 4px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer
+}
+
+main section.db-informations .content .content .blog .editing button:hover,
+main section.db-offers .content .content .blog .editing button:hover,
+main section.db-status .content .content .blog .editing button:hover,
+main section.db-blogs .content .content .blog .editing button:hover {
+    color: #a577ff
+}
+
+main section.db-informations .content .content .blog .top,
+main section.db-offers .content .content .blog .top,
+main section.db-status .content .content .blog .top,
+main section.db-blogs .content .content .blog .top {
+    min-height: 200px;
+    max-height: 200px;
+    width: 100%
+}
+
+main section.db-informations .content .content .blog .top img,
+main section.db-offers .content .content .blog .top img,
+main section.db-status .content .content .blog .top img,
+main section.db-blogs .content .content .blog .top img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover
+}
+
+main section.db-informations .content .content .blog .info,
+main section.db-offers .content .content .blog .info,
+main section.db-status .content .content .blog .info,
+main section.db-blogs .content .content .blog .info {
+    padding: 16px;
+    max-height: 110px;
+    overflow-y: auto
+}
+
+main section.db-informations .content .content .blog .info::-webkit-scrollbar,
+main section.db-offers .content .content .blog .info::-webkit-scrollbar,
+main section.db-status .content .content .blog .info::-webkit-scrollbar,
+main section.db-blogs .content .content .blog .info::-webkit-scrollbar {
+    display: none
+}
+
+main section.db-informations .content .content .blog .info span,
+main section.db-offers .content .content .blog .info span,
+main section.db-status .content .content .blog .info span,
+main section.db-blogs .content .content .blog .info span {
+    color: #8b8b8b;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px
+}
+
+main section.db-informations .content .content .blog .info p,
+main section.db-offers .content .content .blog .info p,
+main section.db-status .content .content .blog .info p,
+main section.db-blogs .content .content .blog .info p {
+    color: #f9f9fb;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 8px
+}
+
+main section.db-informations .content .content .blog:hover,
+main section.db-offers .content .content .blog:hover,
+main section.db-status .content .content .blog:hover,
+main section.db-blogs .content .content .blog:hover {
+    transform: scale(1.025);
+    background: #191c23
+}
+
+@media screen and (max-width: 767px) {
+
+    main section.db-informations .content .content .blog,
+    main section.db-offers .content .content .blog,
+    main section.db-status .content .content .blog,
+    main section.db-blogs .content .content .blog {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 1124px) {
+
+    main section.db-informations .content .content,
+    main section.db-offers .content .content,
+    main section.db-status .content .content,
+    main section.db-blogs .content .content {
+        gap: 16px
+    }
+}
+
+main section.db-informations .content .list,
+main section.db-offers .content .list,
+main section.db-status .content .list,
+main section.db-blogs .content .list {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap
+}
+
+main section.db-informations .content .list .about-box,
+main section.db-offers .content .list .about-box,
+main section.db-status .content .list .about-box,
+main section.db-blogs .content .list .about-box {
+    height: 396px;
+    flex: 0 1 calc(33.3% - 4px);
+    background: #14161c;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative
+}
+
+main section.db-informations .content .list .about-box:first-child,
+main section.db-offers .content .list .about-box:first-child,
+main section.db-status .content .list .about-box:first-child,
+main section.db-blogs .content .list .about-box:first-child {
+    border-radius: 8px 0 0 8px
+}
+
+main section.db-informations .content .list .about-box:last-child,
+main section.db-offers .content .list .about-box:last-child,
+main section.db-status .content .list .about-box:last-child,
+main section.db-blogs .content .list .about-box:last-child {
+    border-radius: 0 8px 8px 0
+}
+
+main section.db-informations .content .list .about-box:only-child,
+main section.db-offers .content .list .about-box:only-child,
+main section.db-status .content .list .about-box:only-child,
+main section.db-blogs .content .list .about-box:only-child {
+    border-radius: 8px
+}
+
+@media screen and (max-width: 1124px) {
+
+    main section.db-informations .content .list .about-box,
+    main section.db-offers .content .list .about-box,
+    main section.db-status .content .list .about-box,
+    main section.db-blogs .content .list .about-box {
+        flex: 0 1 100%;
+        border-radius: 0;
+        height: fit-content
+    }
+
+    main section.db-informations .content .list .about-box:first-child,
+    main section.db-offers .content .list .about-box:first-child,
+    main section.db-status .content .list .about-box:first-child,
+    main section.db-blogs .content .list .about-box:first-child {
+        border-radius: 8px 8px 0 0
+    }
+
+    main section.db-informations .content .list .about-box:last-child,
+    main section.db-offers .content .list .about-box:last-child,
+    main section.db-status .content .list .about-box:last-child,
+    main section.db-blogs .content .list .about-box:last-child {
+        border-radius: 0 0 8px 8px
+    }
+
+    main section.db-informations .content .list .about-box:only-child,
+    main section.db-offers .content .list .about-box:only-child,
+    main section.db-status .content .list .about-box:only-child,
+    main section.db-blogs .content .list .about-box:only-child {
+        border-radius: 8px
+    }
+}
+
+main section.db-informations .content .list .about-box:hover,
+main section.db-offers .content .list .about-box:hover,
+main section.db-status .content .list .about-box:hover,
+main section.db-blogs .content .list .about-box:hover {
+    background: #27262e
+}
+
+main section.db-informations .content .list .about-box:hover .about-box-text,
+main section.db-offers .content .list .about-box:hover .about-box-text,
+main section.db-status .content .list .about-box:hover .about-box-text,
+main section.db-blogs .content .list .about-box:hover .about-box-text {
+    transform: translateY(10px)
+}
+
+main section.db-informations .content .list .about-box .editing,
+main section.db-offers .content .list .about-box .editing,
+main section.db-status .content .list .about-box .editing,
+main section.db-blogs .content .list .about-box .editing {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: fit-content;
+    display: flex;
+    gap: 4px
+}
+
+main section.db-informations .content .list .about-box .editing button,
+main section.db-offers .content .list .about-box .editing button,
+main section.db-status .content .list .about-box .editing button,
+main section.db-blogs .content .list .about-box .editing button {
+    font-size: 15px;
+    color: #8b8b8b;
+    background: #212027;
+    border-radius: 4px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer
+}
+
+main section.db-informations .content .list .about-box .editing button:hover,
+main section.db-offers .content .list .about-box .editing button:hover,
+main section.db-status .content .list .about-box .editing button:hover,
+main section.db-blogs .content .list .about-box .editing button:hover {
+    color: #a577ff
+}
+
+main section.db-informations .content .list .about-box .about-box-icon,
+main section.db-offers .content .list .about-box .about-box-icon,
+main section.db-status .content .list .about-box .about-box-icon,
+main section.db-blogs .content .list .about-box .about-box-icon {
+    color: #f9f9fb;
+    font-size: 32px
+}
+
+main section.db-informations .content .list .about-box .about-box-text h3,
+main section.db-offers .content .list .about-box .about-box-text h3,
+main section.db-status .content .list .about-box .about-box-text h3,
+main section.db-blogs .content .list .about-box .about-box-text h3 {
+    color: #f9f9fb;
+    font-size: 26px;
+    font-weight: 700;
+    word-break: break-all
+}
+
+main section.db-informations .content .list .about-box .about-box-text p,
+main section.db-offers .content .list .about-box .about-box-text p,
+main section.db-status .content .list .about-box .about-box-text p,
+main section.db-blogs .content .list .about-box .about-box-text p {
+    color: #8b8b8b;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    word-break: break-all
+}
+
+main section.db-informations .content .list .about-box .about-box-text a,
+main section.db-offers .content .list .about-box .about-box-text a,
+main section.db-status .content .list .about-box .about-box-text a,
+main section.db-blogs .content .list .about-box .about-box-text a {
+    color: #a577ff;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 4px 0
+}
+
+main section.db-informations .content .list .about-box .about-box-text a:hover svg,
+main section.db-offers .content .list .about-box .about-box-text a:hover svg,
+main section.db-status .content .list .about-box .about-box-text a:hover svg,
+main section.db-blogs .content .list .about-box .about-box-text a:hover svg {
+    transform: translate(5px)
+}
+
+main section.login {
+    padding: 24px;
+    position: relative;
+    top: 71px;
+    height: calc(100% - 76px);
+    display: flex
+}
+
+main section.login .container {
+    background: #14161c;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 512px;
+    margin: auto;
+    flex-direction: column;
+    gap: 32px
+}
+
+main section.login .container .top h4 {
+    color: #f9f9fb;
+    font-weight: 700;
+    font-size: 24px
+}
+
+main section.login .container .top p {
+    color: #8b8b8b;
+    font-weight: 400;
+    font-size: 14px
+}
+
+main section.login .container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px
+}
+
+main section.login .container form .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2px
+}
+
+main section.login .container form .form-group span {
+    color: #8b8b8b;
+    font-weight: 500;
+    font-size: 14px
+}
+
+main section.login .container form .form-group input {
+    width: 100%;
+    height: 32px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: #212027;
+    color: #f9f9fb
+}
+
+main section.login .container form .form-group p {
+    color: red;
+    font-weight: 400;
+    font-size: 13px
+}
+
+main section.login .container form button {
+    width: 100%;
+    height: 42px;
+    border-radius: 4px;
+    background: #a577ff;
+    font-weight: 600;
+    color: #f9f9fb;
+    font-size: 15px;
+    margin-top: 32px;
+    cursor: pointer
+}
+
+main section.login .container form button:hover {
+    background: #ad84ff
+}
+
+main section.contact {
+    background: #14161c;
+    padding: 24px;
+    position: relative;
+    top: 71px
+}
+
+main section.contact .container {
+    margin: auto;
+    background: #212027;
+    width: 100%;
+    height: fit-content;
+    border-radius: 8px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px
+}
+
+main section.contact .container .top h4 {
+    color: #f9f9fb;
+    font-weight: 700;
+    font-size: 24px
+}
+
+main section.contact .container .top p {
+    color: #8b8b8b;
+    font-weight: 400;
+    font-size: 14px
+}
+
+main section.contact .container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+main section.contact .container form .form-group {
+    display: flex;
+    gap: 32px
+}
+
+main section.contact .container form .form-group button {
+    width: 100%;
+    height: 48px;
+    background: #a577ff;
+    color: #14161c;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer
+}
+
+main section.contact .container form .form-group button:hover {
+    background: #945eff
+}
+
+main section.contact .container form .form-group .form-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+main section.contact .container form .form-group .form-input.status label {
+    background: #14161c;
+    height: 42px;
+    width: 100%;
+    padding: 4px 16px;
+    border-radius: 4px;
+    color: #f9f9fb;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer
+}
+
+main section.contact .container form .form-group .form-input.status .options {
+    background: #14161c;
+    border-radius: 0 0 4px 4px;
+    display: none
+}
+
+main section.contact .container form .form-group .form-input.status .options .option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px;
+    cursor: pointer
+}
+
+main section.contact .container form .form-group .form-input.status .options .option:hover {
+    background: #191c23
+}
+
+main section.contact .container form .form-group .form-input.status .options .option .option-color {
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    background: #8b8b8b
+}
+
+main section.contact .container form .form-group .form-input.status .options .option .option-color.green {
+    background: green
+}
+
+main section.contact .container form .form-group .form-input.status .options .option .option-color.yellow {
+    background: #ff0
+}
+
+main section.contact .container form .form-group .form-input.status .options .option .option-color.red {
+    background: red
+}
+
+main section.contact .container form .form-group .form-input.status .options .option span {
+    margin-bottom: 0
+}
+
+main section.contact .container form .form-group .form-input.status.show label {
+    border-radius: 4px 4px 0 0
+}
+
+main section.contact .container form .form-group .form-input.status.show .options {
+    display: block
+}
+
+main section.contact .container form .form-group .form-input span {
+    color: #8b8b8b;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 8px
+}
+
+main section.contact .container form .form-group .form-input input {
+    background: #14161c;
+    height: 42px;
+    width: 100%;
+    padding: 4px 16px;
+    border-radius: 4px;
+    color: #f9f9fb;
+    font-weight: 500;
+    font-size: 14px
+}
+
+main section.contact .container form .form-group .form-input input::placeholder {
+    color: #8b8b8b
+}
+
+main section.contact .container form .form-group .form-input input:hover {
+    background: #191c23
+}
+
+main section.contact .container form .form-group .form-input textarea {
+    background: #14161c;
+    height: 96px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 4px;
+    color: #f9f9fb;
+    font-weight: 500;
+    font-size: 14px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 96px
+}
+
+main section.contact .container form .form-group .form-input textarea::placeholder {
+    color: #8b8b8b
+}
+
+main section.contact .container form .form-group .form-input textarea:hover {
+    background: #191c23
+}
+
+main section.pricing .content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-156px)
+}
+
+main section.pricing .content .options .heading {
+    color: #f9f9fb;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px
+}
+
+main section.pricing .content .options .options-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #212027;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 8px
+}
+
+main section.pricing .content .options .options-list .option {
+    width: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    background: transparent;
+    color: #f9f9fb80;
+    height: 42px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px
+}
+
+main section.pricing .content .options .options-list .option:hover,
+main section.pricing .content .options .options-list .option.active {
+    background: #8344ff;
+    color: #f9f9fb
+}
+
+main section.pricing .content .options .options-list .option:hover.active,
+main section.pricing .content .options .options-list .option.active.active {
+    text-transform: capitalize
+}
+
+main section.pricing .content .options .options-list .option span {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px
+}
+
+main section.pricing .content .options .options-list .option.disabled {
+    cursor: not-allowed
+}
+
+main section.pricing .content .options .options-list .option.disabled:hover {
+    background: #f9f9fb0d;
+    color: #f9f9fb80
+}
+
+@media screen and (max-width: 768px) {
+    main section.pricing .content .options {
+        width: calc(100% - 32px)
+    }
+}
+
+main section.pricing .content .containers {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 16px
+}
+
+main section.pricing .content .containers .container {
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+    width: 360px;
+    background: #14161c;
+    padding: 32px;
+    justify-content: space-between;
+    border-radius: 8px
+}
+
+main section.pricing .content .containers .container:hover {
+    transform: translateY(-10px);
+    background: #191c23
+}
+
+main section.pricing .content .containers .container .informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 32px
+}
+
+main section.pricing .content .containers .container .informations .item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+main section.pricing .content .containers .container .informations .item-info h2 {
+    color: #f9f9fb;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: .5px
+}
+
+main section.pricing .content .containers .container .informations .item-info span {
+    color: #f9f9fb;
+    font-weight: 600;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4px
+}
+
+main section.pricing .content .containers .container .informations .item-info span label {
+    font-size: 12px;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px
+}
+
+main section.pricing .content .containers .container .informations .item-info p {
+    color: #8b8b8b;
+    font-size: 14px;
+    font-weight: 400
+}
+
+main section.pricing .content .containers .container .informations .item-description p {
+    color: #f9f9fb;
+    font-weight: 400;
+    font-size: 14px
+}
+
+main section.pricing .content .containers .container .confirm {
+    width: 100%
+}
+
+main section.pricing .content .containers .container .confirm a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #14161c;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 42px;
+    background: #f9f9fb
+}
+
+main section.pricing .content .containers .container .confirm a:hover {
+    background: #dadae7;
+    color: #212027
+}
+
+main section.pricing .content .containers .container.prime {
+    transform: scale(1.05)
+}
+
+main section.pricing .content .containers .container.prime .informations .item-info span {
+    color: #a577ff
+}
+
+main section.pricing .content .containers .container.prime .confirm a {
+    background: #a577ff
+}
+
+main section.pricing .content .containers .container.prime .confirm a:hover {
+    background: #8344ff
+}
+
+@media screen and (max-width: 767px) {
+    main section.pricing .content .containers .container {
+        width: 100%
+    }
+
+    main section.pricing .content .containers .container.prime {
+        transform: none
+    }
+
+    main section.pricing .content .containers .container.prime:hover {
+        transform: translateY(-10px)
+    }
+}
+
+::selection {
+    background: #a577ff80;
+    color: #f9f9fb
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #212027
+}
+
+::-webkit-scrollbar-track {
+    background: #212027
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a577ff;
+    border-radius: 99px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9e6dff
+}
